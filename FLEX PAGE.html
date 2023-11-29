@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flex Page Example</title>
+    <style>
+        
+        
+
+
+        body {
+            
+            flex-direction: column;
+           
+			 
+        }
+
+        header {
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+        }
+
+                .btn {
+        font-size: 1.2rem;
+        padding: 1rem 2.5rem;
+        border: none;
+        outline: none;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        text-transform: uppercase;
+        background-color: rgb(13, 13, 95);
+        color: rgb(234, 234, 234);
+        font-weight: 700;
+        transition: 0.6s;
+        box-shadow: 0px 0px 60px #1f4c65;
+        
+        }
+        .btn:active {
+        scale: 0.92;
+        }
+
+        .btn:hover {
+        background: rgb(2,29,78);
+        background: linear-gradient(270deg, rgb(94, 50, 172), rgb(193, 234, 45) 60%);
+        color: rgb(4, 4, 38);
+        }
+        nav {
+            display: flex;
+            justify-content: right;
+            list-style: none;
+            padding: 0; 
+            column-gap: 20px;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+
+        .content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 10px;
+        flex: 1;
+        padding: 20px;
+        border-radius: 13px;
+        box-shadow: #3126EB;
+			
+			
+        }
+
+        footer {
+            background-color: #3126EB ;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+			box-shadow: 0.0 10px;
+
+        }
+        .image-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 10px;
+        text-align: center;
+       
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+        }
+
+        .image-container img {
+        width: 200px; 
+        height: 200px;
+        border: 2px solid gray;
+        margin-left: 50px;
+        transition: 800ms;
+        animation: fadeInleft 3s ease;
+        border-radius: 13px;
+        cursor: pointer;
+        box-shadow: 4px 7px 7px 0px blue;
+        }
+        .image-container img:hover{
+        width: 70%;
+        height: 70%;
+        opacity: 1;
+        }
+        #video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+
+        }
+
+		
+			
+			
+		p	{
+		background-color: white;
+		background-image: 200px;
+				
+		}
+       
+        @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+  font-family:'Roboto';
+  background-color: #131417;  
+}
+p {
+  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
+}
+.container {
+  color: #0b0404;
+  font-size: 2.26rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation {
+  height:50px;
+  overflow:hidden;
+  margin-left: 1rem;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height:2.81rem;
+  margin-bottom: 2.81rem;
+  display:inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+.first div {
+  background-color:#20a7d8;
+}
+.second div {
+  background-color:#CD921E;
+}
+.third div {
+  background-color:#c10528;
+}
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -5.62rem;}
+  30% {margin-top: -5.62rem;}
+  40% {margin-top: -11.24rem;}
+  60% {margin-top: -11.24rem;}
+  70% {margin-top: -5.62rem;}
+  80% {margin-top: -5.62rem;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
+.frame {
+	width: var(--size);
+	height: var(--size);
+	max-width: 500px;
+	max-height: 500px;
+	margin: 0 auto;
+	border: 2px #fbfbfb solid;
+	position: relative;
+	box-shadow: inset 0 0 0 20px white;
+	background: url(bauyan.jpg)
+		no-repeat center;
+	background-size: cover;
+	transition: ease all 0.3s;
+	&:hover {
+		box-shadow: inset 0 0 0 0 white;
+		border: 2px #f9f9f9 solid;
+		cursor: pointer;
+		.text {
+			mix-blend-mode: difference;
+			span {
+				color: var(--text-color-hover);
+			}
+		}
+	}
+	.text {
+		transform: translate(
+			calc(calc(var(--font-size) * -1) / 2),
+			calc(calc(var(--font-size) * -1) / 2)
+		);
+		position: relative;
+		height: 100%;
+		transition: ease all 0.3s;
+	}
+	span {
+		font-size: var(--font-size);
+		display: inline-block;
+		text-align: center;
+		width: var(--font-size);
+		animation: frameMove var(--duration) linear infinite;
+		position: absolute;
+		transition: ease all 0.3s;
+		
+	}
+}
+
+	</style>
+</head>
+<body>
+    
+        <nav>
+            <a href="../index.html"><button class="btn">Homepage</button></a>
+            <a href="IT Blog entry page.HTML"><button class="btn">IT Blog</button></a>
+            <a href="FLEX PAGE.HTML"><button class="btn">flexpage</button></a>
+        </nav>
+    <header>
+        <main class="container"> //animation-name
+            <p>Hello 👋 I'm</p>
+            <section class="animation">
+              <div class="first"><div>RUSTY C. CARSON</div></div>
+              <div class="second"><div>CSS NC2 PASSER</div></div>
+              <div class="third"><div>1ST YEAR BSIT</div></div>
+            </section>
+          </main>
+          <div class="frame"> //hidden text
+            <div class="text">
+             <span>V</span>
+             <span>E</span>
+             <span>A</span>
+             <span>B</span>
+             <span>I</span>
+             <span>A</span>
+             <span>N</span>
+            
+             <span>M</span>
+             <span>Y</span>
+             <span>C</span>
+             <span>O</span>
+             <span>M</span>
+             <span>F</span>
+             <span>O</span>
+             <span>R</span>
+             <span>T</span>
+        
+          
+            </div>
+          </div>
+       
+    </header>
+
+   
+
+
+    
+    <div class="content" style="text-align: center;"  >
+       <video controls width="400" height="400" >
+			<source src="../media/24.mp4" type="video/mp4">
+       </video>
+       <video controls width="400" height="400" >
+            <source src="../media/video.mp4" type="video/mp4">
+        </video>
+        <video controls width="400" height="400" >
+            <source src="../media/1017.mp4" type="video/mp4">
+			
+         </video>
+    </div>
+    <video autoplay muted loop id="video-background" >
+        <source src="../media/" type="video/mp4">
+    </video>
+    <div>
+      
+        
+        <div class="image-container" >
+            <img src="../media/0000.jpg">
+            <img src="../media/1001.jpeg" >
+            <img src="../media/1002.jpeg" >
+            <img src="../media/1003.jpeg" >
+            <img src="../media/1004.jpeg" >
+            <img src="../media/1005.jpeg" >
+            <img src="../media/1006.jpeg" >
+            <img src="../media/1007.jpeg" >
+            <img src="../media/1008.jpeg" >
+            <img src="../media/1009.jpeg" >
+            <img src="../media/1010.jpeg" >
+            <img src="../media/1011.jpeg" >
+            <img src="../media/1012.jpeg" >
+            <img src="../media/1013.jpeg" >
+            <img src="../media/1014.jpeg" >
+            <img src="../media/0001.jpg" >
+            <img src="../media/1020.jpeg" >
+            <img src="../media/1017.jpeg" >
+            <img src="../media/1018.jpeg" >
+            <img src="../media/1019.jpeg" >
+          </div>
+          <div class="container1" style="text-align: center;">
+            <a target="_blank" href="https://www.facebook.com"><button type="button"><img src="../media/fb.png" height="40px" width="50px" ></button></a>
+            <a target="_blank" href="https://www.instagram.com"><button type="button"><img src="../media/ig.jpg" height="40px" width="50px" ></button></button></a>
+            <a target="_blank" href="https://www.youtube.com"><button type="button"><img src="../media/yt.png" height="40px" width="50px" ></button></button></a>
+          </div>
+         
+    <footer>
+        <h2> &copy; My Flex Page </h2>
+    </footer>
+</body>
+</html>
